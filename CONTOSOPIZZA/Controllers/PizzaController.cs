@@ -19,7 +19,7 @@ namespace CONTOSOPIZZA.Controllers
         public ActionResult<Pizza> Get(int id)
         {
             var pizza = PizzaService.Get(id);
-            if (pizza == null)
+            if (pizza is null)
                 return NotFound();
 
             return pizza;
